@@ -5,7 +5,7 @@ using System.Web;
 
 namespace KillerAppSE2.Models
 {
-    public class User
+    public class UserStudent
     {
     }
 }
