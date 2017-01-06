@@ -13,5 +13,18 @@ namespace KillerAppSE2.Controllers
         {
             return View();
         }
+
+        public ActionResult Ouder()
+        {
+            return View();
+        }
+
+        public ActionResult Student()
+        {
+            return View();
+        }
+
+        [HttpPost]
+
     }
 }
