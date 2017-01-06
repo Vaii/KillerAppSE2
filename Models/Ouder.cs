@@ -5,16 +5,15 @@ using System.Web;
 
 namespace KillerAppSE2.Models
 {
-    public class UserOuder
+    public class Ouder : User
     {
-        public string initialen { get; set; }
-        public string achternaam { get; set; }
-        public int loginPin { get; set; }
-        public int mobielNr { get; set; }
-        public int telNr { get; set; }
-        public string eMail { get; set; }
-        public string thuisAdres { get; set; }
-        public string beperkingen { get; set; }
-        public int leeftijd { get; set; }
+        public int mobielNr { get; private set; }
+        public string beperkingen { get; private set; }
+        public int leeftijd { get; private set; }
+
+        public Ouder()
+        {
+            
+        }
     }
 }

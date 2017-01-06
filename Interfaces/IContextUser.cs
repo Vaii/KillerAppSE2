@@ -7,8 +7,9 @@ using KillerAppSE2.Models;
 
 namespace KillerAppSE2.Interfaces
 {
-    interface IContextUser
+    public interface IContextUser
     {
-        bool RegisterUser(UserOuder Ouder);
+        bool RegisterUser(Student User);
+        bool RegisterUser(Ouder User);
     }
 }
