@@ -11,9 +11,14 @@ namespace KillerAppSE2.Models
         public string emailRef { get; private set; }
         public string studeerLocatie { get; private set; }
 
-        public Student()
+        public Student(string initalen, string achternaam, int loginPin, string eMail, string telNr, string thuisAdres)
         {
-            
+            base.initialen = initalen;
+            base.achternaam = achternaam;
+            base.loginPin = loginPin;
+            base.email = eMail;
+            base.telNr = telNr;
+            base.thuisAdres = thuisAdres;
         }
     }
 }

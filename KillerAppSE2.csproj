@@ -169,6 +169,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="ViewModel\RegisterViewModelOuder.cs" />
+    <Compile Include="ViewModel\RegisterViewModelStudent.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

@@ -7,11 +7,12 @@ namespace KillerAppSE2.Models
 {
     public abstract class User
     {
-        public string initialen { get; private set; }
-        public string achternaam { get; private set; }
-        public int loginPin { get; private set; }
-        public string email { get; private set; }
-        public int telNr { get; private set; }
-        public string thuisAdres { get; private set; }
+        public string initialen { get; set; }
+        public string achternaam { get; set; }
+        public int loginPin { get; set; }
+        public string email { get; set; }
+        public string telNr { get; set; }
+        public string thuisAdres { get; set; }
+
     }
 }

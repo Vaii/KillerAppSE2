@@ -30,7 +30,6 @@ namespace KillerAppSE2.Context
             cmd.Parameters.AddWithValue("@TelNr", User.telNr);
             cmd.Parameters.AddWithValue("@Email", User.email);
             cmd.Parameters.AddWithValue("@ThuisAdres", User.thuisAdres);
-            cmd.Parameters.AddWithValue("@Beperking", User.beperkingen);
             cmd.Parameters.AddWithValue("@Leeftijd", User.leeftijd);
 
             try
