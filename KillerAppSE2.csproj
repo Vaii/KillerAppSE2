@@ -154,7 +154,9 @@
     <Compile Include="Context\SQLContextUser.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\OuderController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -182,6 +184,10 @@
     <Content Include="Views\Register\Register.cshtml" />
     <Content Include="Views\Register\Ouder.cshtml" />
     <Content Include="Views\Register\Student.cshtml" />
+    <Content Include="Views\Shared\_LayoutLoggedInStudent.cshtml" />
+    <Content Include="Views\Student\StudentBase.cshtml" />
+    <Content Include="Views\Shared\_LayoutLoggedInOuder.cshtml" />
+    <Content Include="Views\Ouder\OuderBase.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

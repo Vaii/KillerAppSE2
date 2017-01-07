@@ -11,5 +11,8 @@ namespace KillerAppSE2.Interfaces
     {
         bool RegisterUser(Student User);
         bool RegisterUser(Ouder User);
+
+        Student LoginStudent(string email, string password);
+        Ouder LoginOuder(string email, string password);
     }
 }

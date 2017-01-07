@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - StuMobiel</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-3.1.1.intellisense.js"></script>
+</head>
+<body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    @Html.ActionLink("Stumobiel", "OuderBase", "Ouder", null , new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Over StuMobiel", "About", "About", null, new { @class = "navbar-brand"})</li>
+                    <li>@Html.ActionLink("Registreren", "Register", "Register", null, new { @class = "navbar-brand" })</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+<br/>
+<br/>
+<br/>
+<br/>
+
+    
+
+<div class="container body-content">
+            @RenderBody()
+            <hr />
+
+            <footer>
+                <p>&copy; @DateTime.Now.Year - StuMobiel</p>
+            </footer>
+        </div>
+    
+
+</body>
+</html>

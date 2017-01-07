@@ -22,5 +22,16 @@ namespace KillerAppSE2.Models
             this.mobielNr = mobielnr;
             this.leeftijd = leeftijd;
         }
+
+        public Ouder(string initalen, string achternaam, string eMail, string telNr, string mobielnr, string thuisAdres, int leeftijd)
+        {
+            base.initialen = initalen;
+            base.achternaam = achternaam;
+            base.email = eMail;
+            base.telNr = telNr;
+            base.thuisAdres = thuisAdres;
+            this.mobielNr = mobielnr;
+            this.leeftijd = leeftijd;
+        }
     }
 }

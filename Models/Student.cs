@@ -21,5 +21,15 @@ namespace KillerAppSE2.Models
             base.thuisAdres = thuisAdres;
             this.studeerLocatie = studeerlocatie;
         }
+
+        public Student(string initalen, string achternaam, string eMail, string telNr, string thuisAdres, string studeerlocatie)
+        {
+            base.initialen = initalen;
+            base.achternaam = achternaam;
+            base.email = eMail;
+            base.telNr = telNr;
+            base.thuisAdres = thuisAdres;
+            this.studeerLocatie = studeerlocatie;
+        }
     }
 }

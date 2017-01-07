@@ -13,6 +13,8 @@ namespace KillerAppSE2.Context
     public class SQLContextUser : IContextUser
     {
         private MSSQLConnector _connector;
+        private Student Student { get; set; }
+        private Ouder Ouder { get; set; }
 
         public SQLContextUser(MSSQLConnector connector)
         {
@@ -64,6 +66,79 @@ namespace KillerAppSE2.Context
             catch
             {
                 return false;
+            }
+        }
+
+        public Student LoginStudent(string email, string wachtwoord)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM UserStudent WHERE Email = @Email AND LoginPin = @Login";
+            cmd.Parameters.AddWithValue("@Email", email);
+            cmd.Parameters.AddWithValue("@Login", wachtwoord);
+
+            try
+            {
+                var studentInfo = new List<DataRow>();
+                studentInfo.AddRange(_connector.ExecuteQueryCommand(cmd));
+
+
+                if (studentInfo.Count != 0)
+                {
+                    foreach (DataRow dr in studentInfo)
+                    {
+                        Student stu = new Student(Convert.ToString(dr["Initialen"]),
+                            Convert.ToString(dr["Achternaam"]), Convert.ToString(dr["Email"]),
+                            Convert.ToString(dr["Telnr"]), Convert.ToString(dr["ThuisAdres"]),
+                            Convert.ToString(dr["StudeerLocatie"]));
+                        Student = stu;
+                    }
+                    return Student;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public Ouder LoginOuder(string email, string wachtwoord)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM UserOuder WHERE Email = @Email AND LoginPin = @Login";
+            cmd.Parameters.AddWithValue("@Email", email);
+            cmd.Parameters.AddWithValue("Login", wachtwoord);
+
+            try
+            {
+                var ouderInfo = new List<DataRow>();
+                ouderInfo.AddRange(_connector.ExecuteQueryCommand(cmd));
+
+
+                if (ouderInfo.Count != 0)
+                {
+                    foreach (DataRow dr in ouderInfo)
+                    {
+                        Ouder oud = new Ouder(Convert.ToString(dr["Initialen"]), Convert.ToString(dr["Achternaam"]), Convert.ToString(dr["Email"]),
+                            Convert.ToString(dr["TelNr"]), Convert.ToString(dr["MobielNr"]), Convert.ToString(dr["ThuisAdres"]), 
+                            Convert.ToInt32(dr["Leeftijd"]));
+                        Ouder = oud;
+                    }
+                    return Ouder;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
             }
         }
     }
