@@ -2,6 +2,10 @@
     Layout = "~/Views/Shared/_LayoutLoggedInStudent.cshtml";
 }
 
-<h2>hoi student</h2>
+
+@model KillerAppSE2.ViewModel.RegisterViewModelStudent
+
+
+<h2>hoi @Html.ViewData.Model.Student.initialen @Html.ViewData.Model.Student.achternaam</h2>
 
 

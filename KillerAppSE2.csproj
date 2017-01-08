@@ -151,7 +151,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Connector\IConnector.cs" />
     <Compile Include="Connector\MSSQLConnector.cs" />
-    <Compile Include="Context\SQLContextUser.cs" />
+    <Compile Include="Context\Student\MemoryContextStudent.cs" />
+    <Compile Include="Context\User\SQLContextUser.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OuderController.cs" />
@@ -160,7 +161,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IContextStudent.cs" />
     <Compile Include="Interfaces\IContextUser.cs" />
+    <Compile Include="Models\Beschikbaarheid.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Ouder.cs" />
     <Compile Include="Models\Student.cs" />
@@ -170,6 +173,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Repository\StudentRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="ViewModel\RegisterViewModelOuder.cs" />
     <Compile Include="ViewModel\RegisterViewModelStudent.cs" />
@@ -188,6 +192,7 @@
     <Content Include="Views\Student\StudentBase.cshtml" />
     <Content Include="Views\Shared\_LayoutLoggedInOuder.cshtml" />
     <Content Include="Views\Ouder\OuderBase.cshtml" />
+    <Content Include="Views\Student\Beschikbaarheid.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

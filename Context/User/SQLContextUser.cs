@@ -13,7 +13,7 @@ namespace KillerAppSE2.Context
     public class SQLContextUser : IContextUser
     {
         private MSSQLConnector _connector;
-        private Student Student { get; set; }
+        private Models.Student Student { get; set; }
         private Ouder Ouder { get; set; }
 
         public SQLContextUser(MSSQLConnector connector)
@@ -46,7 +46,7 @@ namespace KillerAppSE2.Context
             }
         }
 
-        public bool RegisterUser(Student User)
+        public bool RegisterUser(Models.Student User)
         {
             SqlCommand cmd = new SqlCommand("RegisterStudent");
             cmd.CommandType = CommandType.StoredProcedure;
@@ -69,7 +69,7 @@ namespace KillerAppSE2.Context
             }
         }
 
-        public Student LoginStudent(string email, string wachtwoord)
+        public Models.Student LoginStudent(string email, string wachtwoord)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
@@ -87,7 +87,7 @@ namespace KillerAppSE2.Context
                 {
                     foreach (DataRow dr in studentInfo)
                     {
-                        Student stu = new Student(Convert.ToString(dr["Initialen"]),
+                        Models.Student stu = new Models.Student(Convert.ToString(dr["Initialen"]),
                             Convert.ToString(dr["Achternaam"]), Convert.ToString(dr["Email"]),
                             Convert.ToString(dr["Telnr"]), Convert.ToString(dr["ThuisAdres"]),
                             Convert.ToString(dr["StudeerLocatie"]));

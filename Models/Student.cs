@@ -20,6 +20,7 @@ namespace KillerAppSE2.Models
             base.telNr = telNr;
             base.thuisAdres = thuisAdres;
             this.studeerLocatie = studeerlocatie;
+            this.emailRef = "";
         }
 
         public Student(string initalen, string achternaam, string eMail, string telNr, string thuisAdres, string studeerlocatie)
@@ -30,6 +31,12 @@ namespace KillerAppSE2.Models
             base.telNr = telNr;
             base.thuisAdres = thuisAdres;
             this.studeerLocatie = studeerlocatie;
+            this.emailRef = "";
+        }
+
+        public Student()
+        {
+            
         }
     }
 }

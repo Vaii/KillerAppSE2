@@ -42,6 +42,7 @@ namespace KillerAppSE2.Controllers
             }
             else
             {
+                Response.Write("<script>alert('Registreren mislukt, probeer opnieuw');</script>");
                 return View("Ouder");
             }
 
@@ -58,6 +59,7 @@ namespace KillerAppSE2.Controllers
             }
             else
             {
+                Response.Write("<script>alert('Registreren mislukt, probeer opnieuw');</script>");
                 return View("Student");
             }
 
